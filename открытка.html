@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Поздравление с Днем Рождения, Ира!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff99cc; /* Измените цвет фона на желаемый */
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffcc99; /* Измените цвет фона контейнера на желаемый */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: bounce 2s ease infinite; /* Анимация */
+            position: relative;
+        }
+        h1 {
+            color: #ff6600;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 5px; /* Закругление углов для изображений */
+        }
+        .flowers-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .flower {
+            width: 50px;
+            height: 50px;
+            background-color: #f442d6; /* Цвет цветочка */
+            border-radius: 50%;
+            position: absolute;
+            animation: fall 5s linear infinite; /* Анимация цветочка */
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="" alt="Смешная картинка">
+        <h1>С Днем Рождения, Ира!</h1>
+        <p>
+            Дорогая Ира, сегодня твой день, и мы не могли пропустить этот замечательный повод, чтобы поздравить тебя! Ты - настоящая звезда, и мы желаем тебе всегда сиять так ярко, как сегодня.
+        </p>
+        <p>
+            Пусть в твоей жизни будет больше смеха, радости и улыбок, чем ты только можешь себе представить. И не забудь, что всегда можешь нас найти, если нужна компания для новых приключений!
+        </p>
+        <div class="flowers-container">
+            <!-- Добавьте несколько цветов по аналогии с .flower -->
+            <div class="flower" style="left: 10%; animation-duration: 6s;"></div>
+            <div class="flower" style="left: 30%; animation-duration: 5s;"></div>
+            <div class="flower" style="left: 50%; animation-duration: 4s;"></div>
+            <div class="flower" style="left: 70%; animation-duration: 6s;"></div>
+            <div class="flower" style="left: 90%; animation-duration: 5s;"></div>
+        </div>
+        <img src="data:image/jpeg;base64,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" alt="Смешная картинка">
+        <p>
+            С днем рождения, Ира! Пусть этот день будет таким же веселым и ярким, как и ты сама!
+        </p>
+    </div>
+</body>
+</html>
