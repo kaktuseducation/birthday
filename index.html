@@ -10,17 +10,17 @@
             text-align: center;
         }
         .container {
-            top: 50%; /* Перемещение контейнера на 50% от верхней границы */
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #ffcc99; /* Измените цвет фона контейнера на желаемый */
+            background-color: #ffcc99;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            animation: bounce 4s ease infinite; /* Анимация */
-            position: absolut;
-            
-            transform: translateY(-50%, -50%); /* Коррекция положения, чтобы контейнер был по центру вертикально */
+            animation: bounce 2s ease infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         h1 {
             color: #ff6600;
