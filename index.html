@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Поздравление с Днем Рождения, Ира!</title>
     <style>
-        body {
+           body {
             font-family: Arial, sans-serif;
             background-color: #ff99cc;
             text-align: center;
@@ -13,7 +13,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
+
         .container {
             max-width: 800px;
             padding: 20px;
@@ -22,6 +24,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             animation: bounce 2s ease infinite;
             text-align: center;
+            display: none;
         }
         h1 {
             color: #ff6600;
@@ -32,7 +35,7 @@
         }
         img {
             max-width: 100%;
-            border-radius: 5px; /* Закругление углов для изображений */
+            border-radius: 5px;
         }
         .flowers-container {
             position: absolute;
@@ -45,10 +48,10 @@
         .flower {
             width: 50px;
             height: 50px;
-            background-color: #f442d6; /* Цвет цветочка */
+            background-color: #f442d6;
             border-radius: 50%;
             position: absolute;
-            animation: fall 5s linear infinite; /* Анимация цветочка */
+            animation: fall 5s linear infinite;
         }
         @keyframes fall {
             0% {
@@ -68,11 +71,35 @@
                 transform: translateY(-5px);
             }
         }
+
+        .warning-message {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #ff0000; /* Красный цвет */
+            color: #fff; /* Белый цвет текста */
+            padding: 10px 20px; /* Отступы вокруг текста кнопки */
+            border: none; /* Убираем границу кнопки */
+            border-radius: 5px; /* Закругляем углы */
+            cursor: pointer; /* Изменяем курсор при наведении */
+        }
+
+        /* Стили для активной кнопки */
+        button:hover {
+            background-color: #ff3333; /* Цвет кнопки при наведении */
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="" alt="Смешная картинка">
+    <div class="warning-message">
+        <p style="font-size: 24px; font-weight: bold;">ОПАСНО!!! Нажимайте на кнопку, если вам есть 21 год!!!!</p>
+
+        <button onclick="showBirthdayMessage()">Рискнуть</button>
+    </div>
+    
+    <div class="container" id="birthday-container" display = 'none'>
         <h1>С Днем Рождения, Ира!</h1>
         <p>
             Дорогая Ира, сегодня твой день, и мы не могли пропустить этот замечательный повод, чтобы поздравить тебя! Ты - настоящая звезда, и мы желаем тебе всегда сиять так ярко, как сегодня.
@@ -81,7 +108,6 @@
             Пусть в твоей жизни будет больше смеха, радости и улыбок, чем ты только можешь себе представить. И не забудь, что всегда можешь нас найти, если нужна компания для новых приключений!
         </p>
         <div class="flowers-container">
-            <!-- Добавьте несколько цветов по аналогии с .flower -->
             <div class="flower" style="left: 10%; animation-duration: 6s;"></div>
             <div class="flower" style="left: 30%; animation-duration: 5s;"></div>
             <div class="flower" style="left: 50%; animation-duration: 4s;"></div>
@@ -93,5 +119,18 @@
             С днем рождения, Ира! Пусть этот день будет таким же веселым и ярким, как и ты сама!
         </p>
     </div>
+
+    <script>
+        function showBirthdayMessage() {
+            const warningMessage = document.querySelector('.warning-message');
+            const birthdayContainer = document.getElementById('birthday-container');
+            warningMessage.style.display = 'none';
+            birthdayContainer.style.display = 'block';
+        }
+    </script>
 </body>
+</html>
+
+
+
 </html>
